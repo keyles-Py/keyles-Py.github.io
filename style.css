@@ -1,0 +1,245 @@
+:root
+{
+    --tamano-icon-footer:50px;
+    --width-tarjeta-servicio:80%;
+}
+
+*,::after,::before
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3em 0 0 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+
+nav
+{
+    top: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.421);
+    z-index: 5;
+}
+
+li
+{
+ display: block;
+ list-style: none;
+ height: 100%;
+ transition: all 200ms;
+}
+
+li>a
+{
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    padding: 1em 2em;
+    color: black;
+    transition: all 200ms;
+    border-bottom:solid 2px red;
+}
+.active-menu
+{
+    background-color: blue;
+    color: white;
+}
+
+li>a:hover
+{
+    background-color: rgba(0, 89, 254, 0.773);
+    color: white;
+    transform: scale(1.2);
+    text-shadow: 1px 1px 2px rgb(18, 0, 155);
+    font-weight: 900;
+    border-radius: 0 10px 0 10px;
+}
+
+.active-menu
+{
+    background-color: rgba(0, 0, 0, 0.402);
+    color: white !important;
+    border-radius: 0 0 10px 10px ;
+    border-bottom:solid 2px rgb(0, 110, 255);
+}
+
+banner
+{
+ background-color: rgb(4, 175, 4);
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ flex-direction: column;
+ height: 250px;
+ width: 100%;
+ position: relative;
+ overflow: hidden;
+ z-index: 2;
+ box-shadow: 0px 0px 5cap 10px rgba(0, 0, 0, 0.334) ;
+ border-bottom: 0.2em solid rgba(255, 0, 0, 0.299);
+}
+banner>h1
+{
+    color: white;
+    font-size: 7em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    text-shadow: 1px 2px 6px black;
+}
+banner>h2{
+  
+    text-align: center;
+    font-size: 3em;
+    color: white;
+    text-shadow: 1px 2px 6px black;
+}
+banner>img
+{
+    position: absolute;
+    left: 0.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    object-fit: contain;
+    width: 15%;
+    border-radius: 10px;
+}
+
+
+footer
+{
+ width: 100%;
+ margin-top: 4em;
+ background-color: rgb(0, 53, 33);
+ overflow: hidden;
+}
+
+#f-informacion
+{
+   display: flex; 
+   justify-content:space-between ;
+   align-items: center;
+   padding: 2em 0;
+
+}
+
+#f-informacion>div
+{
+   width: 33%;
+}
+
+#f-informacion>div:nth-child(2)
+{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ 
+}
+
+#f-informacion>div:nth-child(2)>a
+{
+ margin-left: 1em;
+ 
+}
+#f-informacion>div:nth-child(2)>a:last-child
+{
+ margin-right: 1em;
+}
+
+#f-informacion>div:nth-child(2)>a>img
+{
+    height: var(--tamano-icon-footer);
+    width: var(--tamano-icon-footer);
+    border-radius: 20%;
+    background-color: red;
+    border: 2px solid white;
+    transition: all 200ms;
+}
+#f-informacion>div:nth-child(2)>a>img:hover
+{
+    transform: scale(1.2);
+}
+footer>div>div:first-child
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    color: white;
+
+}
+footer>div>div:last-child
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    color: white;
+}
+
+@media screen and (max-width: 916px) 
+{
+    banner
+    {
+        padding: 1em 0;
+    }
+    banner>h1
+    {
+        font-size: 4em;
+        text-shadow: 1px 2px 6px black;
+    }
+    banner>h2{
+        font-size: 2em;
+        text-shadow: 1px 2px 6px black;
+        text-align: center;
+    }
+    banner>img
+    {
+        display: none;
+    }
+    
+
+    footer
+    {
+     width: 100%;
+     margin-top: 2em;
+     overflow: auto;
+    }
+
+    #f-informacion
+    {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #f-informacion>div
+    {
+        width: 100%;
+        padding: 1em;
+    }
+
+    #f-informacion>div:nth-child(2)
+    {
+     justify-content: space-around;
+     background-color: rgba(0, 0, 0, 0.209);
+    }
+
+    #f-informacion>div:nth-child(2)>a{ margin-left: 0em;}
+    #f-informacion>div:nth-child(2)>a:last-child{margin-right: 0em;}
+
+    #f-informacion>div:nth-child(2)>a>img:hover
+    {
+        transform: scale(1.2);
+    }
+}
